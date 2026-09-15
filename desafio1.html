@@ -9,9 +9,15 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-aurora-primary">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">🏠 Imobiliária Web</a>
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+        <img src="imagens/Gemini_Generated_Image_fc7ck0fc7ck0fc7c-removebg-preview.png" alt="Logo Aurora Imobiliária" height="100" class="me-2 rounded">
+        AURORA IMOBILIÁRIA
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
@@ -25,33 +31,38 @@
     </div>
   </nav>
 
-  <div class="container my-5">
-    <div class="card shadow-sm p-4 mx-auto" style="max-width: 600px;">
-      <h3 class="card-title text-primary mb-3">1. Financiamento Imobiliário</h3>
+  <div class="container my-5 flex-grow-1">
+    <div class="card card-aurora p-4 mx-auto" style="max-width: 600px;">
+      <h3 class="card-title text-aurora-primary mb-3">1. Financiamento Imobiliário</h3>
       <p class="text-muted">Simula parcelas mensais fixas com base no valor do imóvel, entrada, taxa de juros e prazo.</p>
       
       <div class="mb-3">
-        <label class="form-label">Valor do Imóvel (R$):</label>
+        <label class="form-label fw-bold">Valor do Imóvel (R$):</label>
         <input type="number" id="fin-valor" class="form-control" placeholder="Ex: 250000">
       </div>
       <div class="mb-3">
-        <label class="form-label">Entrada (R$):</label>
+        <label class="form-label fw-bold">Entrada (R$):</label>
         <input type="number" id="fin-entrada" class="form-control" placeholder="Ex: 50000">
       </div>
       <div class="mb-3">
-        <label class="form-label">Taxa de Juros Anual (%):</label>
+        <label class="form-label fw-bold">Taxa de Juros Anual (%):</label>
         <input type="number" id="fin-juros" class="form-control" placeholder="Ex: 9.5">
       </div>
       <div class="mb-3">
-        <label class="form-label">Prazo (Anos):</label>
+        <label class="form-label fw-bold">Prazo (Anos):</label>
         <input type="number" id="fin-anos" class="form-control" placeholder="Ex: 20">
       </div>
 
-      <button onclick="calcularFinanciamento()" class="btn btn-primary mb-3">Calcular Parcela</button>
+      <button onclick="calcularFinanciamento()" class="btn btn-aurora mb-3">Calcular Parcela</button>
       <div id="res-financiamento" class="alert alert-secondary resultado-box">Preencha os dados acima para calcular.</div>
     </div>
   </div>
 
+  <footer class="text-white text-center py-3 bg-aurora-primary">
+    <small>IFPI Campus Floriano - Introdução à Programação Web</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

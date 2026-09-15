@@ -9,9 +9,15 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-aurora-primary">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">🏠 Imobiliária Web</a>
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+        <img src="imagens/Gemini_Generated_Image_fc7ck0fc7ck0fc7c-removebg-preview.png" alt="Logo Aurora Imobiliária" height="100" class="me-2 rounded">
+        AURORA IMOBILIÁRIA
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
@@ -25,25 +31,30 @@
     </div>
   </nav>
 
-  <div class="container my-5">
-    <div class="card shadow-sm p-4 mx-auto" style="max-width: 600px;">
-      <h3 class="card-title text-primary mb-3">3. Reajuste Anual de Aluguel</h3>
+  <div class="container my-5 flex-grow-1">
+    <div class="card card-aurora p-4 mx-auto" style="max-width: 600px;">
+      <h3 class="card-title text-aurora-primary mb-3">3. Reajuste Anual de Aluguel</h3>
       <p class="text-muted">Aplica a porcentagem de reajuste (IGP-M/IPCA) sobre o valor atual do contrato.</p>
       
       <div class="mb-3">
-        <label class="form-label">Valor Atual do Aluguel (R$):</label>
+        <label class="form-label fw-bold">Valor Atual do Aluguel (R$):</label>
         <input type="number" id="reaj-atual" class="form-control" placeholder="Ex: 1500">
       </div>
       <div class="mb-3">
-        <label class="form-label">Índice de Reajuste (%):</label>
+        <label class="form-label fw-bold">Índice de Reajuste (%):</label>
         <input type="number" id="reaj-taxa" class="form-control" placeholder="Ex: 4.5">
       </div>
 
-      <button onclick="calcularReajuste()" class="btn btn-primary mb-3">Aplicar Reajuste</button>
+      <button onclick="calcularReajuste()" class="btn btn-aurora mb-3">Aplicar Reajuste</button>
       <div id="res-reajuste" class="alert alert-secondary resultado-box">Insira os valores para atualizar.</div>
     </div>
   </div>
 
+  <footer class="text-white text-center py-3 bg-aurora-primary">
+    <small>IFPI Campus Floriano - Introdução à Programação Web</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

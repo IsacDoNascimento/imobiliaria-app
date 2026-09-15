@@ -1,6 +1,29 @@
-/* Customizações gerais do portal imobiliário */
+:root {
+  /* Cores Principais */
+  --aurora-primary: #0B2545;       
+  --aurora-secondary: #DDA15E;     
+  
+  /* Cores de Suporte e Acento */
+  --aurora-accent: #8D99AE;        
+  --aurora-highlight: #FEFAE0;     
+  
+  /* Cores de Fundo e Superfície */
+  --aurora-bg-main: #F8F9FA;       
+  --aurora-bg-surface: #FFFFFF;    
+  
+  /* Cores de Texto */
+  --aurora-text-dark: #2B2D42;     
+  --aurora-text-light: #F8F9FA;    
+  
+  /* Sombras */
+  --aurora-shadow-sm: 0 2px 4px rgba(11, 37, 69, 0.05);
+  --aurora-shadow-md: 0 4px 12px rgba(11, 37, 69, 0.1);
+}
+
+/* Customizações Gerais */
 body {
-  background-color: #f8f9fa;
+  background-color: var(--aurora-bg-main);
+  color: var(--aurora-text-dark);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,15 +31,46 @@ body {
 
 footer {
   margin-top: auto;
+  background-color: var(--aurora-primary) !important;
+  color: var(--aurora-text-light);
 }
 
-.card {
+/* Classes Customizadas da Marca */
+.bg-aurora-primary {
+  background-color: var(--aurora-primary) !important;
+}
+
+.text-aurora-primary {
+  color: var(--aurora-primary) !important;
+}
+
+.btn-aurora {
+  background-color: var(--aurora-secondary);
+  color: var(--aurora-primary);
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-aurora:hover {
+  background-color: #c48c4e; /* Tom levemente mais escuro do Dourado */
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: var(--aurora-shadow-md);
+}
+
+/* Cards e Caixas de Resultado */
+.card-aurora {
+  background-color: var(--aurora-bg-surface);
+  border: 1px solid var(--aurora-accent);
   border-radius: 10px;
+  box-shadow: var(--aurora-shadow-sm);
   transition: transform 0.2s ease-in-out;
 }
 
-.card:hover {
+.card-aurora:hover {
   transform: translateY(-2px);
+  box-shadow: var(--aurora-shadow-md);
 }
 
 .resultado-box {
@@ -24,4 +78,7 @@ footer {
   min-height: 48px;
   display: flex;
   align-items: center;
+  background-color: var(--aurora-highlight);
+  color: var(--aurora-primary);
+  border: 1px solid var(--aurora-secondary);
 }

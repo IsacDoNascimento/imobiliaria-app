@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imobiliária - Início</title>
+  <title>Desafio 2 - Cálculo de Aluguel</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -20,9 +20,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="desafio1.html">Financiamento</a></li>
-          <li class="nav-item"><a class="nav-link" href="desafio2.html">Aluguel</a></li>
+          <li class="nav-item"><a class="nav-link active" href="desafio2.html">Aluguel</a></li>
           <li class="nav-item"><a class="nav-link" href="desafio3.html">Reajuste</a></li>
           <li class="nav-item"><a class="nav-link" href="desafio4.html">Comparação</a></li>
           <li class="nav-item"><a class="nav-link" href="desafio5.html">Ordenação</a></li>
@@ -31,32 +31,34 @@
     </div>
   </nav>
 
-  <div class="container my-5 text-center">
-    <div class="container my-5 text-center">
-    <div class="p-5 mb-4 rounded-3 shadow-sm" style="background-color: var(--aurora-bg-surface);">
-      <h1 class="display-4 fw-bold text-aurora-primary">Portal Imobiliário</h1>
-      <p class="fs-5 text-muted">Soluções interativas para clientes e corretores.</p>
-      <!-- ... -->
-      <hr class="my-4">
-      <h5>Identificação da Dupla</h5>
-      <p class="mb-1"><strong>Integrantes:</strong> Isac e Werick</p>
-      <p class="mb-0"><strong>Tema:</strong> Imobiliária (Dupla 14)</p>
-    </div>
+  <div class="container my-5 flex-grow-1">
+    <div class="card card-aurora p-4 mx-auto" style="max-width: 600px;">
+      <h3 class="card-title text-aurora-primary mb-3">2. Cálculo de Aluguel Total</h3>
+      <p class="text-muted">Calcula o custo mensal final somando aluguel base, taxa de condomínio e taxa de IPTU.</p>
+      
+      <div class="mb-3">
+        <label class="form-label fw-bold">Valor do Aluguel Base (R$):</label>
+        <input type="number" id="alg-base" class="form-control" placeholder="Ex: 1200">
+      </div>
+      <div class="mb-3">
+        <label class="form-label fw-bold">Condomínio (R$):</label>
+        <input type="number" id="alg-cond" class="form-control" placeholder="Ex: 350">
+      </div>
+      <div class="mb-3">
+        <label class="form-label fw-bold">IPTU Mensal (R$):</label>
+        <input type="number" id="alg-iptu" class="form-control" placeholder="Ex: 80">
+      </div>
 
-    <div class="row g-3">
-      <div class="col-md-4"><a href="desafio1.html" class="btn btn-outline-primary w-100 p-3">Desafio 1: Financiamento</a></div>
-      <div class="col-md-4"><a href="desafio2.html" class="btn btn-outline-primary w-100 p-3">Desafio 2: Cálculo de Aluguel</a></div>
-      <div class="col-md-4"><a href="desafio3.html" class="btn btn-outline-primary w-100 p-3">Desafio 3: Reajuste Anual</a></div>
-      <div class="col-md-6"><a href="desafio4.html" class="btn btn-outline-primary w-100 p-3">Desafio 4: Comparação de m²</a></div>
-      <div class="col-md-6"><a href="desafio5.html" class="btn btn-outline-primary w-100 p-3">Desafio 5: Ordenação por Preço</a></div>
+      <button onclick="calcularAluguel()" class="btn btn-aurora mb-3">Calcular Total</button>
+      <div id="res-aluguel" class="alert alert-secondary resultado-box">Preencha os dados para processar.</div>
     </div>
   </div>
-</div>
 
-  <footer class="bg-dark text-white text-center py-3 bg-aurora-primary">
+  <footer class="text-white text-center py-3 bg-aurora-primary">
     <small>IFPI Campus Floriano - Introdução à Programação Web</small>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
